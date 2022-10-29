@@ -15,14 +15,20 @@ console.log(productWithReduce([4, 3])); // 12
 
 */
 
-let productWithReduce = function(nums) {
-    // Your code here
+let productWithReduce = function (nums) {
+  let res = nums.reduce(function (product, num) {
+    return product * num;
+  }, 1)
+  return res
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
+
+console.log(productWithReduce([10, 3, 5, 2])); // 300
+console.log(productWithReduce([4, 3])); // 12
 
 try {
   module.exports = productWithReduce;
 } catch (e) {
   module.exports = null;
-}
+}

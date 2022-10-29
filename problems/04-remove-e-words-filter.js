@@ -13,7 +13,11 @@ console.log(removeEWords('Enter the building')); // 'building'
 */
 
 let removeEWords = function (sentence) {
-  sentence.split(' ')
+  let newSentence = sentence.split(' ')
+  let words = newSentence.filter(function (word) {
+    return !word.includes('e')
+  })
+  return words.join(' ')
 };
 
 console.log(removeEWords('What time is it everyone?')); // 'What is it'
